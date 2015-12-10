@@ -1,0 +1,49 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    If there is something works in one version but not in the other, compare
+    their differences definitely will make finding bugs easier.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    You may want rewrite some functions. When new version introduces some bugs,
+    it's convenient to return to previous working versions.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Pros: You can keep each commit represents a logical change rather than some
+          unrelated trivial changes, it makes changelog more readable.
+    Cons: If you don't have a efficient tool to do manually commit, it is a bit
+          of wasting time.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Git is used by programmers to tracking the changes in their codes, and
+    sometimes one change would affect multiple files, it is reasonable to save
+    that logical change to multiple files. Version control systems like Google
+    Docs is used by people from different background, changes in one file is
+    mostly possible do not have logical relation to others.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    Use git log to view the whole change history of a project,
+    and use git diff to compare the differences of two commits of interest.
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    You can always find go back and double check to a working version by
+    using git checkout. 
+    如果知道某个commit是没有bug的, 可以通过git checkout回到之前的 commit,
+    然后double checked那个commit的确没有bug之后, 就可以从那个commit开始, 
+    一个个check out之后的commits, 看是哪个commit引入了某个bug. 找到那个引
+    入bug的commit后, 如果想知道到底bug是在那里引入的, 可以使用git diff.
+    
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    Practice more.
+
