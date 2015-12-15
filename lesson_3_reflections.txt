@@ -1,1 +1,4 @@
-When would you want to create a remote repository rather than keeping all your work local?
+When would you want to use a remote repository rather than keeping all your work local?
+  Having a local repository should be my first choice. Maybe sometimes I don't get my
+  computer around, I have to use the repository. Or the computer I'm using is beyond 
+  my control, I don't want to the owner have control to or find out my project.
