@@ -5,46 +5,36 @@ repository? What value do you think it offers?
     area contains all the files in the directory that a repo is associated
     with.
 
-How could having easy access to the entire history of a file make you a more
-efficient programmer in the long term?
-
-    You may want rewrite some functions. When new version introduces some bugs,
-    it's convenient to return to previous working versions.
-
-What do you think are the pros and cons of manually choosing when to create a
-commit, like you do in Git, vs having versions automatically saved, like Google
-docs does?
-
-    Pros: You can keep each commit represents a logical change rather than some
-          unrelated trivial changes, it makes changelog more readable.
-    Cons: If you don't have a efficient tool to do manually commit, it is a bit
-          of wasting time.
-
-Why do you think some version control systems, like Git, allow saving multiple
-files in one commit, while others, like Google Docs, treat each file separately?
-
-    Git is used by programmers to tracking the changes in their codes, and
-    sometimes one change would affect multiple files, it is reasonable to save
-    that logical change to multiple files. Version control systems like Google
-    Docs is used by people from different background, changes in one file is
-    mostly possible do not have logical relation to others.
-
-How can you use the commands git log and git diff to view the history of files?
-
-    Use git log to view the whole change history of a project,
-    and use git diff to compare the differences of two commits of interest.
-
-How might using version control make you more confident to make changes that
-could break something?
-
-    You can always find go back and double check to a working version by
-    using git checkout. 
-    如果知道某个commit是没有bug的, 可以通过git checkout回到之前的 commit,
-    然后double checked那个commit的确没有bug之后, 就可以从那个commit开始, 
-    一个个check out之后的commits, 看是哪个commit引入了某个bug. 找到那个引
-    入bug的commit后, 如果想知道到底bug是在那里引入的, 可以使用git diff.
+How can you use the staging area to make sure you have one commit per 
+logical change?
     
-Now that you have your workspace set up, what do you want to try using Git for?
+    Run git diff --staged to compare the staging area with the latest
+    commit to find the difference.
 
-    Practice more.
+What are some situations when branches would be helpful in keeping your
+history organized? How would branches help?
 
+    When you want add some experimental features to your project, or want
+    to create a version of different languages.
+    With branches, you can focus on adding new features without worrying
+    these new feature would break your project.
+
+How do the diagrams help you visulaize the branch structure?
+
+    Use "git log --graph --oneline branch_1 branch_2 ..."?
+    Through the diagrams, you can easily figure out the commons and diffs
+    between diffrent branches.
+
+What is the result of merging two branches together? Why do we represent it
+in the diagram the way we do?
+
+    The features added in other branch are available in the branch you merge
+    into.
+
+What are the pros and cons of Git's automatic merging vs. always doing
+merges manually?
+
+    With automatic merging, you can save time and improve effeciency. Doing
+    merges manully can avoid breaking something. As long as version control
+    systems do not act 'smartly' on their own, automatic merging is good.
+    
